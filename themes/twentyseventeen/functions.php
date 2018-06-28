@@ -584,15 +584,6 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
-
-add_filter( 'gform_post_data', 'client', 10, 2 );
-function custom_taxonomy( $post_data, $form ) {
-    //------------------------------------------------------------------------------------
-    //post_tag is the default taxonomy for tags. Replace it with your custom taxonomy name
-    $custom_taxonomy = 'post_tag';
-    //------------------------------------------------------------------------------------
-    $tags = implode( ',', $post_data['tags_input'] );
-    $post_data['tax_input'] = array( $custom_taxonomy => $tags );
-    $post_data['tags_input'] = null;
-    return $post_data;
-}
+/*
+	Testing 
+*/
